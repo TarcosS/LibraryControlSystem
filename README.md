@@ -16,7 +16,9 @@ DATABASE_URL="<DATABASE URL>"
 
 ## Getting Started
 
-First, run the development server:
+First, run the RestAPI server:
+
+cd server
 
 ```bash
 npm start
@@ -28,6 +30,6 @@ pnpm start
 bun start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Licence
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
