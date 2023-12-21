@@ -7,5 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ulaş Kökkılıç",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "antd": "^5.12.2",
+    "axios": "^1.6.2",
+    "react-router-dom": "^6.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5"
+  }
 }
