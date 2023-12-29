@@ -4,6 +4,8 @@ import DashboardLayout from '../pages/dashboard';
 import Title from "antd/es/typography/Title";
 import { useEffect } from "react";
 import Page_404 from "../components/404";
+import Tables from "../pages/tables";
+import Reservations from "../pages/reservations";
 
 const ProtectorEl = () => {
     const navigate = useNavigate(); useEffect(()=>{navigate('/login')},[]); return <></>;
@@ -15,12 +17,20 @@ export default function Router() {
             element: <Page_404 />,
         },
         {
-            path: "/dashboard",
+            path: "/home",
             element: <DashboardLayout />,
             children: [
                 {
-                    path: "/dashboard",
+                    path: "/home",
                     element: <Title style={{color: "#383838"}}>Dashboard</Title>,
+                },
+                {
+                    path: "/home/tables",
+                    element: <Tables />,
+                },
+                {
+                    path: "/home/reservations",
+                    element: <Reservations />,
                 }
             ],
         }

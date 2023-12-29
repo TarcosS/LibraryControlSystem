@@ -18,8 +18,9 @@ const Table = sequelize.define('Table', {
         defaultValue: 'normal',
     },
     reservAt: {
-        type: DataTypes.DATE,
-        allowNull: true
+        type: DataTypes.ARRAY(DataTypes.STRING),
+        allowNull: false,
+        defaultValue: []
     },
     isDeleted: {
         type: DataTypes.BOOLEAN,

@@ -98,8 +98,20 @@ export default function SideNav() {
         {
             type: "link",
             icon: '/icons/dashboard.svg',
-            text: 'Dashboard',
-            path: '/dashboard'
+            text: 'Ana Sayfa',
+            path: '/home'
+        },
+        {
+            type: "link",
+            icon: '/icons/dashboard.svg',
+            text: 'Tables',
+            path: '/home/tables'
+        },
+        {
+            type: "link",
+            icon: '/icons/dashboard.svg',
+            text: 'Reservations',
+            path: '/home/reservations'
         }
     ]
     return (

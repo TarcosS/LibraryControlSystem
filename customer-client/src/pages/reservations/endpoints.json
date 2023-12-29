@@ -1,0 +1,5 @@
+{
+    "getReservations": "/reservation/getReservations",
+    "cancelReservation": "/reservation/cancelReservation",
+    "verifyReservation": "/reservation/verifyReservation"
+}

@@ -4,9 +4,7 @@ import reportWebVitals from './reportWebVitals';
 import { store } from './store';
 import { Provider } from 'react-redux';
 import Router from './routes';
-import { ConfigProvider, theme } from 'antd';
-import { App } from 'antd';
-import { ToastContainer } from 'react-toastify';
+import { ConfigProvider } from 'antd';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }: { children:ReactElement}) => {
   // call this function when you want to authenticate the user
   const login = async (data:any) => {
     setUser(data);
-    navigate("/dashboard");
+    navigate("/home");
   };
 
   // call this function to sign out logged in user

@@ -8,8 +8,7 @@ tableRouter.post('/createTable', (req, res) => {
     const { tableName, tableType } = req.body;
     Table.create({
         name: tableName,
-        tableType: tableType,
-        reservAt: null
+        tableType: tableType
     }).then(table => {
         if(table){
             return res.status(200).json({status: 'success', message: 'Table created'});

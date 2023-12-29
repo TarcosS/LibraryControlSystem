@@ -20,7 +20,17 @@ const Reservation = sequelize.define('Reservation', {
         type: DataTypes.ENUM('normal', 'private'),
         defaultValue: 'normal',
     },
+    reservAt: {
+        type: DataTypes.ARRAY(DataTypes.STRING),
+        allowNull: false,
+        defaultValue: []
+    },
     isDeleted: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: false,
+    },
+    isCancelled: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
         defaultValue: false,

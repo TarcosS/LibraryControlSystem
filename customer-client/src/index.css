@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-[data-prefers-color="light"] {
-    color-scheme: light;
-}
-
-[data-prefers-color="dark"] {
-    color-scheme: dark;
+:where(.css-dev-only-do-not-override-p7e5j5).ant-btn-primary {
+    background-color: #1677ff!important;
 }

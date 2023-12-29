@@ -24,13 +24,12 @@ export default function Login() {
         if (response?.data || response?.status === 201 || response?.status === 200) {
             const mainData: AuthResponse = response?.data;
             
-            Service.setToken(mainData.access_token);
-            Service.setRefreshToken(mainData.refresh_token);
-            Service.setAuthorizationToken(mainData.access_token);
+            Service.setToken(mainData.token);
+            Service.setAuthorizationToken(mainData.token);
 
             setPending(false);
             dispatch(setUser(response?.data));
-            navigate('/dashboard');
+            navigate('/home');
         } else {
             toast(response?.response?.data?.message);
             setPending(false);

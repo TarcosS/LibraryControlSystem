@@ -16,10 +16,7 @@ export interface User {
 }
 
 export interface AuthResponse {
-    access_token: string,
-    refresh_token: string,
-    scrap_status: boolean,
-    user_details: User
+    token: string,
 }
 export interface AuthState {
   user: any,
@@ -36,9 +33,8 @@ export const authSlice = createSlice({
   initialState,
   reducers: {
     setUser: (state, action: PayloadAction<AuthResponse>) => {
-        console.log('hi')
-      state.user = action.payload.user_details;
-      state.token = action.payload.access_token;
+      console.log('hi')
+      state.token = action.payload.token;
     },
     logout: (state) => {
         state.user = null;

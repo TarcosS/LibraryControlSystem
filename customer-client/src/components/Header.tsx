@@ -12,7 +12,7 @@ export default function Header() {
         switch (index) {
             case 0:
                 return {
-                    href: '/dashboard',
+                    href: '/home',
                     title: <HomeOutlined />,
                 }
             case 1:
