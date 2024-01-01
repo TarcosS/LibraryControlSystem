@@ -16,6 +16,8 @@ export type ReservationProps = {
     isCancelled: boolean,
     createdAt: string,
     updatedAt: string,
+    Table: any,
+    User: any
 }
 
 export default function Reservations() {

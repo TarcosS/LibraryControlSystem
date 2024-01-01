@@ -104,13 +104,13 @@ export default function SideNav() {
         {
             type: "link",
             icon: '/icons/dashboard.svg',
-            text: 'Tables',
+            text: 'Masalar',
             path: '/home/tables'
         },
         {
             type: "link",
             icon: '/icons/dashboard.svg',
-            text: 'Reservations',
+            text: 'Reservasyonlarım',
             path: '/home/reservations'
         }
     ]

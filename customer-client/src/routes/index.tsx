@@ -6,11 +6,19 @@ import { useEffect } from "react";
 import Page_404 from "../components/404";
 import Tables from "../pages/tables";
 import Reservations from "../pages/reservations";
+import service from "../pages/auth/service";
 
 const ProtectorEl = () => {
     const navigate = useNavigate(); useEffect(()=>{navigate('/login')},[]); return <></>;
 }
 export default function Router() {
+    if(window.localStorage.getItem('token')) {
+        const token = window.localStorage.getItem('token');
+        if(token) {
+            service.setAuthorizationToken(token);
+        }
+    }
+
     const privateRoutes = [
         {
             path: "*",

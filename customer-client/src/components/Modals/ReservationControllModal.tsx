@@ -31,13 +31,17 @@ export default function ReservationControlModal({reservation, open, handleCancel
                         case 0: 
                             return (
                                 <div className="flex flex-col gap-3 py-2 w-full">
-                                    <Button
-                                        className="w-full"
-                                        size="large"
-                                        onClick={() => {setTab(1)}}
-                                    >
-                                        Rezervasyon Doğrula
-                                    </Button>
+                                    {
+                                        reservation?.isActive ? (
+                                            <Button
+                                                className="w-full"
+                                                size="large"
+                                                onClick={() => {setTab(1)}}
+                                            >
+                                                Rezervasyon Doğrula
+                                            </Button>
+                                        ) : null
+                                    }
                                     <Button
                                         className="w-full"
                                         size="large"

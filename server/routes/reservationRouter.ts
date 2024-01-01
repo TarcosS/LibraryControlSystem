@@ -49,7 +49,8 @@ reservationRouter.get('/getReservations', isAuth, (req, res) => {
     Reservation.findAll({
         where: {
             userId: req.userId
-        }
+        },
+        include: [Table, User]
     }).then(reservations => {
         if(reservations){
             return res.status(200).json({status: 'success', data: reservations});

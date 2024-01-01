@@ -1,5 +1,7 @@
 import { DataTypes } from 'sequelize';
 import { sequelize } from '../configs/db';
+import User from './User';
+import Table from './Table';
 
 const Reservation = sequelize.define('Reservation', {
     id: {
@@ -10,11 +12,19 @@ const Reservation = sequelize.define('Reservation', {
     },
     tableId: {
         type: DataTypes.UUID,
-        allowNull: false
+        allowNull: false,
+        references: {
+            model: Table,
+            key: 'id'
+        }
     },
     userId: {
         type: DataTypes.UUID,
-        allowNull: false
+        allowNull: false,
+        references: {
+            model: User,
+            key: 'id'
+        }
     },
     tableType: {
         type: DataTypes.ENUM('normal', 'private'),
