@@ -1,0 +1,5 @@
+{
+    "login": "/auth/sign-in",
+    "refresh_token": "/auth/token/refresh",
+    "getMe": "/auth/me"
+}

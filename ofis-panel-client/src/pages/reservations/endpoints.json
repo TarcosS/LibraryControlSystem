@@ -1,0 +1,4 @@
+{
+    "getReservations": "/reservation/getReservations",
+    "deleteReservation": "/reservation/cancelReservation"
+}

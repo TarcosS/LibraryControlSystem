@@ -48,7 +48,7 @@ app.use('/api/v1/table', tableRouter);
 /** Database connection */
 initAssociations();
 sequelize
-  .sync({ force: false })
+  .sync({ force: true })
   .then(() => {
       console.info('Database connected!');
       /** Server */

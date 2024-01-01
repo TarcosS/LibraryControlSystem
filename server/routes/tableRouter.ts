@@ -28,8 +28,9 @@ tableRouter.get('/getTables', (req, res) => {
     }).catch(err => {if(err){return res.status(500).json({status: 'warning', message: 'Table not created!!'})}});
 });
 
-tableRouter.delete('/removeTable', (req, res) => {
-    const { tableId } = req.query as { tableId: string};
+tableRouter.post('/removeTable', (req, res) => {
+    const { tableId } = req.body as { tableId: string};
+    console.log(tableId);
     Table.destroy({
         where: {
             id: tableId
